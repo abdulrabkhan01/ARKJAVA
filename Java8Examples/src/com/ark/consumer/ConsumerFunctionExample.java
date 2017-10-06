@@ -6,11 +6,6 @@ import java.util.function.Consumer;
 
 public class ConsumerFunctionExample {
 	public static void main(String args[]) {
-		Consumer<Integer> consumer = i -> System.out.print(" " + i);
-		List<Integer> integerList = Arrays.asList(new Integer(1), new Integer(10), new Integer(200), new Integer(101),
-				new Integer(-10), new Integer(0));
-		printList(integerList, consumer);
-		
 		List<MyInt> aList = Arrays.asList(new MyInt(1),new MyInt(2), new MyInt(3));
 		Consumer<MyInt> consumer1 = i -> i.setI(i.getI() *2);
 		System.out.println(aList);
@@ -26,11 +21,6 @@ public class ConsumerFunctionExample {
 		
 	}
 
-	public static void printList(List<Integer> listOfIntegers, Consumer<Integer> consumer) {
-		for (Integer integer : listOfIntegers) {
-			consumer.accept(integer);
-		}
-	}
 
 }
 
