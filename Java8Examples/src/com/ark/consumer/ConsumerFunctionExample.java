@@ -14,6 +14,7 @@ public class ConsumerFunctionExample {
 		
 	}
 
+	//By this method we are applying behaviour
 	private static void modifyState(List<MyInt> aList, Consumer<MyInt> consumer1) {
 		for (MyInt myInt : aList) {
 			consumer1.accept(myInt);
