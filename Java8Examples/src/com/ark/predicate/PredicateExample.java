@@ -1,13 +1,15 @@
 package com.ark.predicate;
 
 import java.util.ArrayList;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.*;
 
 public class PredicateExample {
 public static void main(String[] args) {
 	List<Apple> apples = AppleHelper.getAllApples(10);
-	List<Apple> redApples = apples.stream().filter(a -> a.getColor().equalsIgnoreCase("Red")).collect(Collectors.toList());
+	Predicate<Apple> p = a -> a.getColor().equalsIgnoreCase("Red");
+	List<Apple> redApples = apples.stream().filter(p).collect(Collectors.toList());
 	double totalPriceOfApples = apples.stream().mapToDouble(a -> a.getPrice()).sum();
 	
 }
