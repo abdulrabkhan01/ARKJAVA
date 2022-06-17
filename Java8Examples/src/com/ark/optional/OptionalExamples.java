@@ -1,10 +1,7 @@
 package com.ark.optional;
 
-import javax.swing.text.html.Option;
-import java.math.BigDecimal;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.OptionalInt;
 import java.util.function.Consumer;
 
 /**
